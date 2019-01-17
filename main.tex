@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\title{LaTeX Assignment 0}
+\author{Gibson Green }
+\date{January 13, 2019}
+
+\begin{document}
+
+\maketitle
+
+1. A 3 x 5 box with a title row
+
+\vspace{5mm}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ Column 1 & Column 2 & Column 3 & Column 4 & Column 5 \\
+ \hline
+& & & & & & & & &\\ \hline
+& & & & & & & & &\\ \hline
+& & & & & & & & &\\ \hline
+ \end{tabular}
+ \vspace{5mm}
+ 
+ 2. Find the radius of convergence and interval of convergence of the series.
+ 
+ $$\sum_{n=1}^{\infty} \frac{x^{n}}{n^{2}5^{n}}$$
+ \textbf{Answers}
+ \vspace{5mm}
+ $$\lim_{n\to\infty} \mid \frac{a_{n+1}}{a_n} \mid = \lim_{n\to\infty} \mid \frac{x^{n+1}}{(n+1)^2 5^{n+1}} \cdot \frac{n^2 5^n}{x^n} \mid $$
+ $$= \lim_{n\to\infty} \frac{1}{(1+\frac{1}{n})^2} \frac{\mid x \mid}{5}$$
+ $$= \frac{\mid x \mid}{5} $$
+ 
+\vspace{5mm}
+By the Ratio Test, this series converges when $\frac{\mid x \mid}{5}<1,$ or $\mid x \mid <5$. Hence, the radius of convergence is 5. Checking the endpoints: When x= -5, the series is $\sum_{n=1}^{\infty} \frac{1}{n^2}$, which is a convergent p-series. When x=5, the series becomes $\sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}$, which converges by the alternation series test. \\
+
+\vspace{5mm}
+Find the area of the region that lies inside both circle $r= 2sin(\theta) + cos(\theta).$ Hint: consider two regions. \\
+ \textbf{Answers} \\
+ The curves intersect where $2 sin(\theta)= sin(\theta)+cos(\theta) \Rightarrow{}sin(\theta)= cos(\theta) \Rightarrow{}\theta = \frac{\pi}{4}$, and also at the origin at which $\theta= \frac{3\pi}{4}$ on the second curve. \\
+
+\vspace{5mm}
+$$A= \int_{0}^{\frac{\pi}{4}} \frac{1}{2} (2sin\theta)^2 d\theta + \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{2} (sin\theta + cos\theta)^2 d\theta $$
+$$ = \int_{0}^{\frac{\pi}{4}} (1-cos2\theta) d\theta + \frac{1}{2} \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} (1 + sin2\theta) d\theta $$
+$$= \Big[\theta - \frac{1}{2}sin2\theta \Big]^{\frac{\pi}{4}}_0 + 
+\Big[\frac{1}{2}\theta - \frac{1}{4}cos2\theta \Big]^{\frac{3\pi}{4}}_\frac{\pi}{4}$$
+$$= \frac{1}{2} (\pi - 1) $$
+
+4. Create a 4 x 9 matrix.
+\vspace{5mm}
+\[
+\begin{bmatrix}
+    1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0  \\
+    0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\
+\end{bmatrix}
+\]
+\vspace{5mm}
+    \item 
+5. Create an itemized list with an itemized sublist 
+\begin{itemize}    
+  \item (Submitted by Dewey) x=3 
+  \item (Submitted by Cheatem) x = $\frac{{3}}{{4}}$ or x = $\cfrac{{3}}{{4}}$ \\
+  \item (Submitted by Andy Howe)
+  \begin{itemize}
+    \item A regular, inline fraction x = $\frac{{3}}{{\frac{a}{0}}}$
+    \item A fraction centered on a new line with larger size:
+    $$ x = \cfrac{{3}}{{\frac{a}{0}}}$$
+    \item A fraction, inline, but with larger size: x = $\cfrac{{3}}{{\cfrac{a}{0}}}$
+     \end{itemize}
+\end{itemize}
+
+6. I can type \textbf{bold text}, {\textit{italicized text}}, the real 
+or \newcommand{\R}{\mathbb{R}} \( \R \) \ using "backslash R" (since it is a "newcommand") and the integers \newcommand{\Z}{\mathbb{Z}} \( \Z \) \
+I can even type x \in \newcommand{\N}{\mathbb{N}} \( \N \) \ or A  \cap B \subseteq C
+
+ 7. 
+ \vspace{5mm}
+ \includegraphics[width=\linewidth]{Me.png}
+
+\end{document}
